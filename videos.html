@@ -41,4 +41,25 @@
   <a href="photo.html" class ="button">✦ Enter the Hall ?</a>
   </section>
 
+     <button id="show-comments" class="button">💬 Leave a Comment</button>
+   <div id="comments-section" style="display:none;">
+  <!-- Password prompt will trigger this section -->
+  <iframe id="comment-form" src="https://docs.google.com/forms/d/e/1FAIpQLScPiqkm7jALu9YDXdJ9IjD6uU3qFGpLtcWO371oycEqKSzPRA/viewform?embedded=true" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0" style="display:none;">Loading…</iframe>
+</div>
+<script>
+const password = "goldenwing"; // set your password
+
+document.getElementById("show-comments").addEventListener("click", function(){
+    const input = prompt("Enter the password to access the comments:");
+    if(input === password) {
+        document.getElementById("comments-section").style.display = "block";
+        document.getElementById("comment-form").style.display = "block";
+        this.style.display = "none"; // hide the button
+    } else {
+        alert("Wrong password!");
+    }
+});
+</script>
+
+
 
