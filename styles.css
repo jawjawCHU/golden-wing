@@ -70,6 +70,7 @@ body {
     h1 {
       margin: 0;
       font-size: 2.5em;
+        color: #a19060;
     }
 
     .video-grid {
@@ -125,3 +126,4 @@ body {
       background-color: #ffdb58;
 
     }
+
