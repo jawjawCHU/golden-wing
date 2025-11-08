@@ -124,39 +124,8 @@ p {
       left: 20px;
     }
 
-body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #1a1a1a;
-      color: #ffd700;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      text-align: center;
-    }
-    input {
-      background: #333;
-      border: 1px solid #ffd700;
-      color: #ffd700;
-      padding: 0.6em 1em;
-      border-radius: 10px;
-      margin-top: 1em;
-      outline: none;
-    }
-    button {
-      background: #ffd700;
-      color: #1a1a1a;
-      border: none;
-      border-radius: 10px;
-      padding: 0.6em 1em;
-      margin-top: 1em;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-    button:hover {
-      background: #ffea70;
-    }
+
+
 
 
 
