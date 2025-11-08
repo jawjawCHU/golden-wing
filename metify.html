@@ -90,103 +90,56 @@
   <h1>Me-tify 🎧</h1>
   <p class="scroll-hint">(Scroll sideways to explore your sound universe)</p>
 
-  <div class="custom-player">
-  <button id="playBtn">▶</button>
-  <span id="title">Palace</span>
-  <div class="progress-bar"><div id="progress"></div></div>
-  <audio id="song" src="plc.mp3"></audio>
+<div class="card">
+  <img class="cover" src="covers/song1.jpg" alt="Cover 1">
+  <div class="title">AI Lullaby</div>
+  <button class="playBtn">▶</button>
+  <audio class="audio-player" src="songs/song1.mp3"></audio>
 </div>
 
-   <div class="custom-player">
-  <button id="playBtn">▶</button>
-  <span id="title">Original Me 1st take%</span>
-  <div class="progress-bar"><div id="progress"></div></div>
-  <audio id="song" src="orime1.mp3"></audio>
+<div class="card">
+  <img class="cover" src="icon.png" alt="Cover 2">
+  <div class="title">99%</div>
+  <button class="playBtn">▶</button>
+  <audio class="audio-player" src="99.mp3"></audio>
 </div>
 
-
-  
-<style>
-  .custom-player {
-    background: #2a2a2a;
-    border: 1px solid #ffd700;
-    border-radius: 10px;
-    padding: 10px;
-    color: #ffd700;
-    text-align: left;
-  }
-  button {
-    background: none;
-    border: none;
-    color: #ffd700;
-    font-size: 1.4em;
-    cursor: pointer;
-  }
-  .progress-bar {
-    width: 100%;
-    height: 6px;
-    background: #444;
-    border-radius: 5px;
-    margin-top: 8px;
-    overflow: hidden;
-  }
-  #progress {
-    height: 100%;
-    width: 0%;
-    background: #ffd700;
-    transition: width 0.2s linear;
-  }
-</style>
+    <div class="title">Original Me</div>
+  <button class="playBtn">▶</button>
+  <audio class="audio-player" src="orime1.mp3"></audio>
+</div>
 
 <script>
-  const audio = document.getElementById("song");
-  const playBtn = document.getElementById("playBtn");
-  const progress = document.getElementById("progress");
+  const cards = document.querySelectorAll('.card');
 
-  playBtn.addEventListener("click", () => {
-    if (audio.paused) {
-      audio.play();
-      playBtn.textContent = "⏸";
-    } else {
-      audio.pause();
-      playBtn.textContent = "▶";
-    }
-  });
+  cards.forEach(card => {
+    const audio = card.querySelector('.audio-player');
+    const playBtn = card.querySelector('.playBtn');
 
-  audio.addEventListener("timeupdate", () => {
-    const percent = (audio.currentTime / audio.duration) * 100;
-    progress.style.width = percent + "%";
-  });
-</script>
+    playBtn.addEventListener('click', () => {
+      if (audio.paused) {
+        // Pause any other audio playing
+        document.querySelectorAll('.audio-player').forEach(a => {
+          if (a !== audio) a.pause();
+        });
+        audio.play();
+        playBtn.textContent = '⏸';
+      } else {
+        audio.pause();
+        playBtn.textContent = '▶';
+      }
+    });
 
-     <div class="custom-player">
-  <button id="playBtn1">▶</button>
-  <span id="title">99%</span>
-  <div class="progress-bar"><div id="progres1s"></div></div>
-  <audio id="song1" src="99.mp3"></audio>
-</div>
+    audio.addEventListener('pause', () => {
+      playBtn.textContent = '▶';
+    });
 
-
-  <script>
-  const audio = document.getElementById("song1");
-  const playBtn = document.getElementById("playBtn1");
-  const progress = document.getElementById("progress1");
-
-  playBtn.addEventListener("click", () => {
-    if (audio.paused) {
-      audio.play();
-      playBtn.textContent = "⏸";
-    } else {
-      audio.pause();
-      playBtn.textContent = "▶";
-    }
-  });
-
-  audio.addEventListener("timeupdate", () => {
-    const percent = (audio.currentTime / audio.duration) * 100;
-    progress.style.width = percent + "%";
+    audio.addEventListener('ended', () => {
+      playBtn.textContent = '▶';
+    });
   });
 </script>
+
 
   
   <p><a href="index.html">← Back to home</a></p>
