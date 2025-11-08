@@ -42,15 +42,16 @@
   <a href="photo.html" class ="button">✦ Enter the Hall ?</a>
   </section>
 
-  <script>
-  const password = "2903009AIECHO";
-  const input = prompt("Enter the password to access the comments:");
-  if(input === password) {
-    document.getElementById("comments-section").style.display = "block";
-  } else {
-    alert("Wrong password!");
+<script>
+  const password = "starlightwing"; // your secret code
+  const entered = prompt("Enter password:");
+  if (entered !== password) {
+    document.body.innerHTML = "<h1>Access denied.</h1>";
   }
 </script>
+</body>
+</html>
+
 
 
 
