@@ -65,7 +65,7 @@ body {
         header {
       text-align: center;
       padding: 40px 0;
-      border-bottom: 1px solid #d4af37;
+      border-bottom: 1px solid #f3f5ff;
     }
 
     h1 {
@@ -74,7 +74,7 @@ body {
     color: #ffffff
     }
 p {
-    color: #a19060;
+    color: #696e80;
 }
     .video-grid {
       display: grid;
@@ -85,10 +85,10 @@ p {
     }
 
     .video-card {
-      background-color: rgba(40, 40, 40, 0.9);
-      border: 1px solid #d4af37;
+      background-color: rgba(172, 171, 189, 0.9);
+      border: 1px solid #272a4e;
       border-radius: 15px;
-      box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+      box-shadow: 0 0 15px rgba(59, 65, 97, 0.3);
       padding: 20px;
       text-align: center;
       width: 320px;
@@ -97,7 +97,7 @@ p {
 
     .video-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 0 25px rgba(212, 175, 55, 0.5);
+      box-shadow: 0 0 25px rgba(61, 61, 65, 0.5);
     }
 
     .iframe {
@@ -109,12 +109,12 @@ p {
 
     .h3 {
       margin-top: 10px;
-      color: #ffdb58;
+      color: #404555;
     }
 
     .back-button {
       display: inline-block;
-      background-color: #d4af37;
+      background-color: #343b41;
       color: #1c1c1c;
       padding: 8px 18px;
       border-radius: 25px;
@@ -124,7 +124,6 @@ p {
       top: 20px;
       left: 20px;
     }
-
 
 
 
